@@ -1,7 +1,7 @@
 # coding=utf8
 """
 cake.py - Because cake is not a lie!
-Copyright 2015, Kharidiron [kharidiron@gmail.com]"
+Copyright 2016, Kharidiron [kharidiron@gmail.com]"
 Licensed under the WTFPL. Do whatever the fuck you want with this. You just
   can't hold me responsible if it breaks something either.
 

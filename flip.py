@@ -1,7 +1,7 @@
 # coding=utf8
 """
 flip.py - Because flipping things is fun!
-Copyright 2015, Kharidiron [kharidiron@gmail.com]"
+Copyright 2016, Kharidiron [kharidiron@gmail.com]"
 Licensed under the WTFPL. Do whatever the fuck you want with this. You just
   can't hold me responsible if it breaks something either.
 
@@ -12,7 +12,7 @@ from __future__ import unicode_literals, absolute_import, print_function, divisi
 import sys
 import upsidedown
 
-from sopel.module import commands, example
+from sopel.module import commands
 
 if sys.version_info.major >= 3:
     unichr = chr
