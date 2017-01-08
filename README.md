@@ -1,2 +1,3 @@
 # sopel_modules
-some silly modules for my sopel chat bot
+
+Silly modules for my Sopel chat bot.
