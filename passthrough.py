@@ -7,13 +7,17 @@ Licensed under the WTFPL. Do whatever the fuck you want with this. You just
 A module for the Sopel IRC Bots.
 """
 
+import os
 import re
+import sys
 
 from sopel.module import rule, commands
 from sopel.tools import get_command_regexp
 
-import flip
+sys.path.append(os.path.join(os.path.realpath(os.path.dirname(__file__))))
+
 import cake
+import flip
 import hug
 import twerk
 
@@ -46,14 +50,14 @@ def passthrough(bot, trigger):
     my_trigger = Trigger(trigger, user, re_match)
 
     # Only works on my commands (currently hard-coded.)
-    if cmd == 'flip':
+    if cmd == 'cake':
+        cake.cake(bot, my_trigger)
+    elif cmd == 'flip':
         flip.flip(bot, my_trigger)
-    elif cmd == 'twerk':
-        twerk.twerk(bot, my_trigger)
     elif cmd == 'hug':
         hug.hug(bot, my_trigger)
-    elif cmd == 'cake':
-        cake.cake(bot, my_trigger)
+    elif cmd == 'twerk':
+        twerk.twerk(bot, my_trigger)
     else:
         pass
 
