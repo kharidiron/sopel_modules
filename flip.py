@@ -1,33 +1,33 @@
-# coding=utf8
 """
 flip.py - Because flipping things is fun!
 Copyright 2016, Kharidiron [kharidiron@gmail.com]"
 Licensed under the WTFPL. Do whatever the fuck you want with this. You just
   can't hold me responsible if it breaks something either.
 
-An module for the Phenny/Willie/Sopel IRC Bots.
+A module for the Sopel IRC Bots.
 """
 
-import sys
+from sopel.module import commands, example
 import upsidedown
-
-from sopel.module import commands
-
-if sys.version_info.major >= 3:
-    unichr = chr
 
 
 @commands("flip")
+@example('.flip')
+@example('.flip table[s]')
+@example('.flip table ove')
+@example('.flip person')
+@example('.flip <nick>')
 def flip(bot, trigger):
     """Flips things... because that is the whole point."""
     if not trigger.group(2):
         bot.say("What should I flip? o.o")
         return
+
     target = " ".join(trigger.group().split()[1:])
     try:
         if target == "table":
             return bot.say(u"(╯°□°）╯︵ ┻━┻")
-        if target == "table over":
+        elif target == "table over":
             return bot.say(u"┬──┬ ノ(゜-゜ノ)")
         elif target == "tables":
             return bot.say(u"┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻")
@@ -45,6 +45,6 @@ def flip(bot, trigger):
     except ValueError:
         return bot.reply(u"I can\'t flip that. -_-;")
 
+
 if __name__ == "__main__":
     pass
-
