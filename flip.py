@@ -14,7 +14,7 @@ import upsidedown
 @commands("flip")
 @example('.flip')
 @example('.flip table[s]')
-@example('.flip table ove')
+@example('.flip table over')
 @example('.flip person')
 @example('.flip <nick>')
 def flip(bot, trigger):
