@@ -22,7 +22,7 @@ flavor = ["tightly", "gently", "in the most lewd way possible", "wholesomely",
 @commands('hug')
 @example('.hug')
 @example('.hug <username>')
-def hugger(bot, trigger):
+def hug(bot, trigger):
     """Give someone a hug... or something more."""
     hugged = trigger.group(3) if trigger.group(3) else "no one in particular"
 
